@@ -2,6 +2,7 @@
 # Creates the repository, links your current working directory and pushes all the files into the repo created
 # Usage gitcreate <Username> <Repo name> <true/false-- Private> <Description>
 # Example curl : curl -u kaustubha29 https://api.github.com/user/repos -d {"name": "CoolStuffAK", "private": "false", "description": "CoolStuffAK"}
+
 gitcreate () { 
   echo " gitcreate <Username> <Repo name> <isPrivate? true/false> <Description> "
   curl -u $1 https://api.github.com/user/repos -d "{\"name\": \"$2\", \"description\": \"$4\", \"private\": \"$3\"}"
