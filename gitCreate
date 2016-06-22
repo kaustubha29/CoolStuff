@@ -1,4 +1,6 @@
 # Add to the bash_profile and source it 
+# Creates the repository, links your current working directory and pushes all the files into the repo created
+# Usage gitcreate <Username> <Repo name> <true/false-- Private> <Description>
 
 gitcreate () { 
   echo " gitcreate <Username> <Repo name> <isPrivate? true/false> <Description> "
