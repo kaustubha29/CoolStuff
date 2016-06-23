@@ -5,7 +5,7 @@
 
 gitcreate () { 
   echo " gitcreate <Username> <Repo name> <isPrivate? true/false> <Description> "
-  curl -u $1 https://api.github.com/user/repos -d "{\"name\": \"$2\", \"description\": \"$4\", \"private\": \"$3\"}"
+  curl -u $1 https://api.github.com/user/repos -d "{\"name\": \"$2\", \"private\":$3, \"description\": \"$4\"}"
   echo "# $2 " >> README.md
   git init
   git add .
